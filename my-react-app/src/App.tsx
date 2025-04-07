@@ -2,12 +2,22 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-
+  const [selectedTab, setSelectedTab] = useState(0);
   return (
     <>
       <div className="tabs">
-        <div className="tab">Home</div>
-        <div className="tab">About</div>
+      <div
+          className={`tab cursor-pointer ${selectedTab === 0 ? 'underline' : ''}`}
+          onClick={() => setSelectedTab(0)}
+        >
+          Home
+        </div>
+        <div
+          className={`tab cursor-pointer ${selectedTab === 1 ? 'underline' : ''}`}
+          onClick={() => setSelectedTab(1)}
+        >
+          About
+        </div>
       </div>
 
       <div className="title">
