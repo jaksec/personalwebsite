@@ -85,6 +85,18 @@ function App() {
                 <a>
                   <img className="selected-tab" src="src/assets/tech-icons/typescript.svg" alt="TypeScript" />
                 </a>
+                <a>
+                  <img className="selected-tab" src="src/assets/tech-icons/react.svg" alt="React" />
+                </a>
+                <a>
+                  <img className="selected-tab" src="src/assets/tech-icons/node.svg" alt="Node" />
+                </a>
+                <a>
+                  <img className="selected-tab" src="src/assets/tech-icons/express.svg" alt="Express" />
+                </a>
+                <a>
+                  <img className="selected-tab" src="src/assets/tech-icons/mongodb.svg" alt="MongoDB" />
+                </a>
               </div>
           </div>
           </>

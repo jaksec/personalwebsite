@@ -67,13 +67,14 @@
 /* About Page */
 
 .about-me-content {
-  max-width: 45rem;
+  max-width: 50rem;
   font-size: 1.3em;
   font-weight: 200;
   margin-top: 3rem;
 }
 
 .tech-stack-wrapper {
+  max-width: 50rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,4 +94,5 @@
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
+  flex-wrap: wrap; /* so icons wrap instead of overflowing */
 }
