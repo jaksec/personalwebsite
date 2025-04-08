@@ -1,67 +1,39 @@
-import { SetStateAction, useEffect, useState } from 'react'
-import './App.css'
+import { SetStateAction, useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import './App.css';
 
-function App() {
-  const [selectedTab, setSelectedTab] = useState(0);
-  const [page, setPage] = useState(0); // 0 = home, 1 = about
-  const [transitioning, setTransitioning] = useState(false);
+function HomePage() {
+    useEffect(() => {
+      document.title = "Home | Chris Jaksec";
+    }, []);
+  
+    return (
+      <>
+        <div className="title">Hi, I'm Chris Jaksec!</div>
+        <div className="who-i-am">I'm a software developer :)</div>
+        <div className="button-container">
+          <a href="src/assets/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <img className='selected-tab' src="src/assets/icons8-resume-50.png" alt="Resume" />
+          </a>
+          <a href="https://www.linkedin.com/in/jaksec" target="_blank" rel="noopener noreferrer">
+            <img className='selected-tab' src="src/assets/icons8-linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://www.github.com/jaksec" target="_blank" rel="noopener noreferrer">
+            <img className='selected-tab' src="src/assets/icons8-github.svg" alt="GitHub" />
+          </a>
+        </div>
+      </>
+    );
+}
 
-  const handleTabClick = (tabIndex: SetStateAction<number>) => {
-    if (tabIndex === page) return;
-
-    setTransitioning(true);
-    setTimeout(() => {
-      setPage(tabIndex);
-      setTransitioning(false);
-    }, 300); // Match this with the fade duration in CSS
-    setSelectedTab(tabIndex);
-  };
+function AboutPage() {
+  useEffect(() => {
+    document.title = "About | Chris Jaksec";
+  }, []);
 
   return (
     <>
-    <div className="container">
-      <div className="tabs">
-        <div
-          className={`selected-tab tab cursor-pointer ${selectedTab === 0 ? 'underline' : ''}`}
-          onClick={() => handleTabClick(0)}
-        >
-          Home
-        </div>
-        <div
-          className={`selected-tab tab cursor-pointer ${selectedTab === 1 ? 'underline' : ''}`}
-          onClick={() => handleTabClick(1)}
-        >
-          About
-        </div>
-        <div
-          className={`selected-tab tab cursor-pointer ${selectedTab === 2 ? 'underline' : ''}`}
-          onClick={() => handleTabClick(2)}
-        >
-          Projects
-        </div>
-    </div>
-
-      <div className={`page-content ${transitioning ? 'fade-out' : 'fade-in'}`}>
-        {page === 0 ? (
-          <>
-            <div className="title">Hi, I'm Chris Jaksec!</div>
-            <div className="who-i-am">I'm a software developer :)</div>
-            <div className="button-container">
-              <a href="src/assets/resume.pdf" target="_blank" rel="noopener noreferrer">
-                <img className='selected-tab' src="src/assets/icons8-resume-50.png" alt="Resume" />
-              </a>
-              <a href="https://www.linkedin.com/in/jaksec" target="_blank" rel="noopener noreferrer">
-                <img className='selected-tab' src="src/assets/icons8-linkedin.svg" alt="LinkedIn" />
-              </a>
-              <a href="https://www.github.com/jaksec" target="_blank" rel="noopener noreferrer">
-                <img className='selected-tab' src="src/assets/icons8-github.svg" alt="GitHub" />
-              </a>
-            </div>
-          </>
-        ) : 
-        page === 1 ? (
-          <>
-          <div className="about-me-content">
+      <div className="about-me-content">
               I'm currently a junior at the University of Central Florida majoring in computer science.
               I'm an aspiring full-stack engineer and primarily work with React, TypeScript,
               and Python. In my free time, you can catch me exploring nature, collecting fragrances, or playing games 
@@ -98,11 +70,18 @@ function App() {
                   <img className="selected-tab" src="src/assets/tech-icons/mongodb.svg" alt="MongoDB" />
                 </a>
               </div>
-          </div>
-          </>
-        ) : (
-          <>
-          <div className="project-list-wrapper">
+        </div>
+    </>
+  );
+}
+
+function ProjectsPage() {
+  useEffect(() => {
+    document.title = "Projects | Chris Jaksec";
+  }, []);
+
+  return (
+      <div className="project-list-wrapper">
             <div className="project-card">
                 <div className="project-icon">
                   <img src="src/assets/noteboard.svg" alt="Noteboard" />
@@ -148,16 +127,70 @@ function App() {
                   Users can create, edit, and share notes in real-time with others.
               </div>
             </div>
+        <div style={{ marginTop: '100px' }} />
 
-            <div style={{ marginTop: '100px' }} />
-
-            </div>
-          </>
-        )}
       </div>
+  );
+}
+
+function Tabs({ onTabClick }: { onTabClick: (path: string) => void }) {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+  return (
+    <div className="tabs">
+      <div className={`selected-tab tab cursor-pointer ${currentPath === '/' ? 'underline' : ''}`} onClick={() => onTabClick('/')}>Home</div>
+      <div className={`selected-tab tab cursor-pointer ${currentPath === '/about' ? 'underline' : ''}`} onClick={() => onTabClick('/about')}>About</div>
+      <div className={`selected-tab tab cursor-pointer ${currentPath === '/projects' ? 'underline' : ''}`} onClick={() => onTabClick('/projects')}>Projects</div>
+    </div>
+  );
+}
+
+function PageWrapper() {
+  const [transitioning, setTransitioning] = useState(false);
+  const [pendingPath, setPendingPath] = useState<string | null>(null);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleTabClick = (path: string) => {
+    if (location.pathname === path) return;
+    setTransitioning(true);
+    setPendingPath(path);
+  };
+
+  useEffect(() => {
+    if (transitioning && pendingPath) {
+      const timeout = setTimeout(() => {
+        navigate(pendingPath);
+        setTransitioning(false);
+        setPendingPath(null);
+      }, 300); // duration should match your CSS fade
+      return () => clearTimeout(timeout);
+    }
+  }, [transitioning, pendingPath, navigate]);
+
+  return (
+    <>
+      <Tabs onTabClick={handleTabClick} />
+      <div className={`page-content ${transitioning ? 'fade-out' : 'fade-in'}`}>
+        <Routes location={location}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+        </Routes>
       </div>
     </>
-  )
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <div className="container">
+        <PageWrapper />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
