@@ -10,7 +10,7 @@ function HomePage() {
     return (
       <>
         <div className="title">Hi, I'm Chris Jaksec!</div>
-        <div className="who-i-am">I'm a software developer :)</div>
+        <div className="who-i-am">I build software.</div>
         <div className="button-container">
           <a href="src/assets/resume.pdf" target="_blank" rel="noopener noreferrer">
             <img className='selected-tab' src="src/assets/icons8-resume-50.png" alt="Resume" />
