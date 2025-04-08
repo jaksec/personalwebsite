@@ -1,0 +1,27 @@
+.who-i-am {
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+  
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.2em; /* Slightly taller to align with descenders */
+    background: white;
+    margin-left: 2px;
+    animation: blink 0.7s infinite;
+    position: relative;
+    top: 0.15em; /* Nudges it down slightly for better vertical alignment */
+    transform: translateY(2px); /* fine-tuned vertical nudge */
+  }
+  
+@keyframes blink {
+    0%, 50% {
+      opacity: 1;
+    }
+    50.01%, 100% {
+      opacity: 0;
+    }
+}

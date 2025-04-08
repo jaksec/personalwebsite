@@ -1,6 +1,7 @@
 import { SetStateAction, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import './App.css';
+import Typewriter from './Typewriter'; // Adjusted path to match relative location
 
 function HomePage() {
     useEffect(() => {
@@ -10,7 +11,7 @@ function HomePage() {
     return (
       <>
         <div className="title">Hi, I'm Chris Jaksec!</div>
-        <div className="who-i-am">I build software.</div>
+        <Typewriter />
         <div className="button-container">
           <a href="resume.pdf" target="_blank" rel="noopener noreferrer">
             <img className='selected-tab' src="src/assets/media-icons/resume.svg" alt="Resume" />
@@ -37,8 +38,14 @@ function AboutPage() {
               I'm currently a junior at the University of Central Florida majoring in computer science.
               I'm an aspiring full-stack engineer and primarily work with React, TypeScript,
               and Python. In my free time, you can catch me exploring nature, collecting fragrances, or playing games 
-              with my friends :)
-          </div>
+              with my friends.
+      </div>
+      <div className="about-me-content">
+              I first started programming at 17, when I was bored in my room and tried to craft a to-do list out of pure HTML.
+              I became more curious and interested so I started learning Python and immediately fell in love with the creativity
+              and problem-solving programming had to offer. I continued my passion for programming at UCF and have
+              been learning and growing ever since. :)
+      </div>
           <div className="tech-stack-wrapper">
             <div className="tech-stack-title">My Tech Stack:</div>
               <div className="tech-stack-container">
@@ -84,7 +91,7 @@ function ProjectsPage() {
       <div className="project-list-wrapper">
             <div className="project-card">
                 <div className="project-icon">
-                  <img src="src/assets/project-icons/noteboard.svg" alt="Noteboard" />
+                  <img className="selected-tab" src="src/assets/project-icons/noteboard.svg" alt="Noteboard" />
                 </div>
                 <div className="project-title">
                   Noteboard
@@ -93,13 +100,13 @@ function ProjectsPage() {
                   </a>
                 </div>
                 <div className="project-description">
-                  A collaborative note-taking web application built with React, Express, and MongoDB.
-                  Users can create, edit, and share notes in real-time with others.
+                A Python application that captures audio input & translates it into keyboard key presses. Utilizes speech recognition & automation libraries 
+                to convert musical notes into real-time key presses.
               </div>
             </div>
             <div className="project-card">
                 <div className="project-icon">
-                  <img src="src/assets/project-icons/eye.svg" alt="BlurrSmith.ai" />
+                  <img className="selected-tab" src="src/assets/project-icons/eye.svg" alt="BlurrSmith.ai" />
                 </div>
                 <div className="project-title">
                   BlurrSmith.ai
@@ -108,13 +115,13 @@ function ProjectsPage() {
                   </a>
                 </div>
                 <div className="project-description">
-                  A collaborative note-taking web application built with React, Express, and MongoDB.
-                  Users can create, edit, and share notes in real-time with others.
+                A React-based web app that automatically detects and blurs faces and license plates in user-uploaded images to protect privacy. 
+                Integrated Flask and OpenCV on the backend for image processing, with Tailwind CSS used to create a clean and intuitive user interface.
               </div>
             </div>
             <div className="project-card">
                 <div className="project-icon">
-                  <img src="src/assets/project-icons/law.svg" alt="LawgicBot" />
+                  <img className="selected-tab" src="src/assets/project-icons/law.svg" alt="LawgicBot" />
                 </div>
                 <div className="project-title">
                   LawgicBot
@@ -123,8 +130,8 @@ function ProjectsPage() {
                   </a>
                 </div>
                 <div className="project-description">
-                  A collaborative note-taking web application built with React, Express, and MongoDB.
-                  Users can create, edit, and share notes in real-time with others.
+                An AI chatbot that provides real-time legal guidance through a user-friendly React interface. Powered by a GPT-based model via the OpenAI API, 
+                it delivers contextually accurate responses. The backend, developed with Flask and Python, connects to an Azure-hosted SQL database to retrieve relevant legal information efficiently.
               </div>
             </div>
         <div style={{ marginTop: '100px' }} />
