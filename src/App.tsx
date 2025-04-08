@@ -14,13 +14,13 @@ function HomePage() {
         <Typewriter />
         <div className="button-container">
           <a href="resume.pdf" target="_blank" rel="noopener noreferrer">
-            <img className='selected-tab' src="/media-icons/resume.svg" alt="Resume" loading="eager" width="48" height="48"/>
+            <img className='selected-tab' src="/media-icons/resume.svg" alt="Resume" />
           </a>
           <a href="https://www.linkedin.com/in/jaksec" target="_blank" rel="noopener noreferrer">
-            <img className='selected-tab' src="/media-icons/linkedin.svg" alt="LinkedIn" loading="eager" width="48" height="48"/>
+            <img className='selected-tab' src="/media-icons/linkedin.svg" alt="LinkedIn" />
           </a>
           <a href="https://www.github.com/jaksec" target="_blank" rel="noopener noreferrer">
-            <img className='selected-tab' src="/media-icons/github.svg" alt="GitHub" loading="eager" width="48" height="48"/>
+            <img className='selected-tab' src="/media-icons/github.svg" alt="GitHub" />
           </a>
         </div>
       </>
@@ -50,31 +50,31 @@ function AboutPage() {
             <div className="tech-stack-title">My Tech Stack:</div>
               <div className="tech-stack-container">
                 <a>
-                  <img className="selected-tab" src="/tech-icons/python.svg" alt="Python" loading="eager" width="48" height="48"/>
+                  <img className="selected-tab" src="/tech-icons/python.svg" alt="Python" />
                 </a>
                 <a>
-                  <img className="selected-tab" src="/tech-icons/java.svg" alt="Java" loading="eager" width="48" height="48"/>
+                  <img className="selected-tab" src="/tech-icons/java.svg" alt="Java" />
                 </a>
                 <a>
-                  <img className="selected-tab" src="/tech-icons/c.svg" alt="C" loading="eager" width="48" height="48"/>
+                  <img className="selected-tab" src="/tech-icons/c.svg" alt="C" />
                 </a>
                 <a>
-                  <img className="selected-tab" src="/tech-icons/javascript.svg" alt="JavaScript" loading="eager" width="48" height="48"/>
+                  <img className="selected-tab" src="/tech-icons/javascript.svg" alt="JavaScript" />
                 </a>
                 <a>
-                  <img className="selected-tab" src="/tech-icons/typescript.svg" alt="TypeScript" loading="eager" width="48" height="48"/>
+                  <img className="selected-tab" src="/tech-icons/typescript.svg" alt="TypeScript" />
                 </a>
                 <a>
-                  <img className="selected-tab" src="/tech-icons/react.svg" alt="React" loading="eager" width="48" height="48"/>
+                  <img className="selected-tab" src="/tech-icons/react.svg" alt="React" />
                 </a>
                 <a>
-                  <img className="selected-tab" src="/tech-icons/node.svg" alt="Node" loading="eager" width="48" height="48"/>
+                  <img className="selected-tab" src="/tech-icons/node.svg" alt="Node" />
                 </a>
                 <a>
-                  <img className="selected-tab" src="/tech-icons/express.svg" alt="Express" loading="eager" width="48" height="48"/>
+                  <img className="selected-tab" src="/tech-icons/express.svg" alt="Express" />
                 </a>
                 <a>
-                  <img className="selected-tab" src="/tech-icons/mongodb.svg" alt="MongoDB" loading="eager" width="48" height="48"/>
+                  <img className="selected-tab" src="/tech-icons/mongodb.svg" alt="MongoDB" />
                 </a>
               </div>
         </div>
@@ -91,12 +91,12 @@ function ProjectsPage() {
       <div className="project-list-wrapper">
             <div className="project-card">
                 <div className="project-icon">
-                  <img className="selected-tab" src="/project-icons/noteboard.svg" alt="Noteboard" loading="eager" width="48" height="48"/>
+                  <img className="selected-tab" src="/project-icons/noteboard.svg" alt="Noteboard" />
                 </div>
                 <div className="project-title">
                   Noteboard
                   <a href="https://www.github.com/jaksec/noteboard" target="_blank" rel="noopener noreferrer">
-                  <img className="selected-tab" src="/symbol-icons/link.svg" loading="eager" width="24" height="24"/>
+                  <img className="selected-tab" src="/symbol-icons/link.svg" />
                   </a>
                 </div>
                 <div className="project-description">
@@ -106,12 +106,12 @@ function ProjectsPage() {
             </div>
             <div className="project-card">
                 <div className="project-icon">
-                  <img className="selected-tab" src="/project-icons/eye.svg" alt="BlurrSmith.ai" loading="eager" width="48" height="48"/>
+                  <img className="selected-tab" src="/project-icons/eye.svg" alt="BlurrSmith.ai" />
                 </div>
                 <div className="project-title">
                   BlurrSmith.ai
                   <a href="https://6507104a5d971a4275e265e1--strong-kringle-b099de.netlify.app/" target="_blank" rel="noopener noreferrer">
-                  <img className="selected-tab" src="/symbol-icons/link.svg" loading="eager" width="24" height="24"/>
+                  <img className="selected-tab" src="/symbol-icons/link.svg" />
                   </a>
                 </div>
                 <div className="project-description">
@@ -121,12 +121,12 @@ function ProjectsPage() {
             </div>
             <div className="project-card">
                 <div className="project-icon">
-                  <img className="selected-tab" src="/project-icons/law.svg" alt="LawgicBot" loading="eager" width="48" height="48"/>
+                  <img className="selected-tab" src="/project-icons/law.svg" alt="LawgicBot" />
                 </div>
                 <div className="project-title">
                   LawgicBot
                   <a href="https://github.com/Lewin-B/KnightHacks-2023" target="_blank" rel="noopener noreferrer">
-                  <img className="selected-tab" src="/symbol-icons/link.svg" loading="eager" width="24" height="24"/>
+                  <img className="selected-tab" src="/symbol-icons/link.svg" />
                   </a>
                 </div>
                 <div className="project-description">
