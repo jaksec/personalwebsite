@@ -156,6 +156,7 @@ function Tabs({ onTabClick }: { onTabClick: (path: string) => void }) {
 function PageWrapper() {
   const [transitioning, setTransitioning] = useState(false);
   const [pendingPath, setPendingPath] = useState<string | null>(null);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -165,21 +166,61 @@ function PageWrapper() {
     setPendingPath(path);
   };
 
+  // Handle route transitions
   useEffect(() => {
     if (transitioning && pendingPath) {
       const timeout = setTimeout(() => {
         navigate(pendingPath);
         setTransitioning(false);
         setPendingPath(null);
-      }, 300); // duration should match your CSS fade
+      }, 300);
       return () => clearTimeout(timeout);
     }
   }, [transitioning, pendingPath, navigate]);
 
+  // Wait for all <img> elements to finish loading before fade-in
+  useEffect(() => {
+    const images = document.querySelectorAll("img");
+    let loaded = 0;
+
+    const onImageLoad = () => {
+      loaded++;
+      if (loaded === images.length) {
+        setImagesLoaded(true);
+      }
+    };
+
+    images.forEach((img) => {
+      if (img.complete) {
+        loaded++;
+      } else {
+        img.addEventListener("load", onImageLoad);
+        img.addEventListener("error", onImageLoad); // In case of 404s or broken URLs
+      }
+    });
+
+    if (loaded === images.length) {
+      setImagesLoaded(true);
+    }
+
+    return () => {
+      images.forEach((img) => {
+        img.removeEventListener("load", onImageLoad);
+        img.removeEventListener("error", onImageLoad);
+      });
+    };
+  }, [location]); // run again on route change
+
+  const pageClass = transitioning
+    ? "fade-out"
+    : imagesLoaded
+    ? "fade-in"
+    : ""; // no fade until images are ready
+
   return (
     <>
       <Tabs onTabClick={handleTabClick} />
-      <div className={`page-content ${transitioning ? 'fade-out' : 'fade-in'}`}>
+      <div className={`page-content ${pageClass}`}>
         <Routes location={location}>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
