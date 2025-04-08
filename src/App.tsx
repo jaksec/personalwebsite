@@ -13,7 +13,7 @@ function HomePage() {
         <div className="title">Hi, I'm Chris Jaksec!</div>
         <Typewriter />
         <div className="button-container">
-          <a href="resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             <img className='selected-tab' src="/media-icons/resume.svg" alt="Resume" />
           </a>
           <a href="https://www.linkedin.com/in/jaksec" target="_blank" rel="noopener noreferrer">
