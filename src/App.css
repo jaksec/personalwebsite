@@ -134,11 +134,19 @@
 
 .project-title {
   font-size: 1.5rem;
-  margin-bottom: 0.5em;
   top: 1.5rem;
   display: flex;
   align-items: center; /* vertically center text + image */
   gap: 0.25rem; /* space between text and image */
+}
+
+.project-tags {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5em;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+
 }
 
 .project-title a {

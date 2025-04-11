@@ -99,6 +99,7 @@ function ProjectsPage() {
                   <img className="selected-tab" src="/symbol-icons/link.svg" />
                   </a>
                 </div>
+                <div className="project-tags">Python, Tkinter, NumPy</div>
                 <div className="project-description">
                 A Python application that captures audio input & translates it into keyboard key presses. Utilizes speech recognition & automation libraries 
                 to convert musical notes into real-time key presses.
@@ -114,6 +115,7 @@ function ProjectsPage() {
                   <img className="selected-tab" src="/symbol-icons/link.svg" />
                   </a>
                 </div>
+                <div className="project-tags">React, TypeScript, Tailwind CSS, Python, OpenCV</div>
                 <div className="project-description">
                 A React-based web app that automatically detects and blurs faces and license plates in user-uploaded images to protect privacy. 
                 Integrated Flask and OpenCV on the backend for image processing, with Tailwind CSS used to create a clean and intuitive user interface.
@@ -129,6 +131,7 @@ function ProjectsPage() {
                   <img className="selected-tab" src="/symbol-icons/link.svg" />
                   </a>
                 </div>
+                <div className="project-tags">React, TypeScript, Python, Azure</div>
                 <div className="project-description">
                 An AI chatbot that provides real-time legal guidance through a user-friendly React interface. Powered by a GPT-based model via the OpenAI API, 
                 it delivers contextually accurate responses. The backend, developed with Flask and Python, connects to an Azure-hosted SQL database to retrieve relevant legal information efficiently.
