@@ -79,8 +79,9 @@ function AboutPage() {
                 </a>
               </div>
         </div>
-        </div>
+
         <div style={{ marginTop: '100px' }} />
+        </div>
     </>
   );
 }
