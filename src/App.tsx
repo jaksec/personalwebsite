@@ -80,6 +80,7 @@ function AboutPage() {
               </div>
         </div>
         </div>
+        <div style={{ marginTop: '100px' }} />
     </>
   );
 }
