@@ -36,7 +36,7 @@ function AboutPage() {
     <>
       <div className="about-me-wrapper">
         <div className="about-me-content">
-                I'm currently a junior at the University of Central Florida majoring in computer science.
+                I'm currently a senior at the University of Central Florida majoring in computer science.
                 I'm an aspiring full-stack engineer and primarily work with React, TypeScript,
                 and Python. In my free time, you can catch me exploring nature, collecting fragrances, or playing games 
                 with my friends.
@@ -45,7 +45,7 @@ function AboutPage() {
                 I first started programming at 17, when I was bored in my room and tried to craft a to-do list out of pure HTML.
                 I became more curious and interested so I started learning Python and immediately fell in love with the creativity
                 and problem-solving programming had to offer. I continued my passion for programming at UCF and have
-                been learning and growing ever since. :)
+                been learning and growing ever since.
         </div>
           <div className="tech-stack-wrapper">
             <div className="tech-stack-title">My Tech Stack:</div>
