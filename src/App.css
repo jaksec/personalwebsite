@@ -82,11 +82,11 @@
 }
 
 .about-me-content {
-  max-width: 38rem;
+  max-width: 40rem;
   font-size: 1.3em;
   font-weight: 200;
   margin-top: 2.5rem;
-  text-align: left;
+  text-align: center;
 }
 
 .tech-stack-wrapper {
@@ -111,6 +111,7 @@
   gap: 1rem;
   margin-top: 2rem;
   flex-wrap: wrap; /* so icons wrap instead of overflowing */
+  max-width: 45rem;
 }
 
 /* Projects Page */

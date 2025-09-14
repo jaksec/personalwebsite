@@ -10,19 +10,21 @@ function HomePage() {
   
     return (
       <>
-        <div className="title">Hi, I'm Chris Jaksec!</div>
-        <Typewriter />
-        <div className="button-container">
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-            <img className='selected-tab' src="/media-icons/resume.svg" alt="Resume" />
-          </a>
-          <a href="https://www.linkedin.com/in/jaksec" target="_blank" rel="noopener noreferrer">
-            <img className='selected-tab' src="/media-icons/linkedin.svg" alt="LinkedIn" />
-          </a>
-          <a href="https://www.github.com/jaksec" target="_blank" rel="noopener noreferrer">
-            <img className='selected-tab' src="/media-icons/github.svg" alt="GitHub" />
-          </a>
-        </div>
+        <header>
+          <div className="title">Hi, I'm Chris Jaksec!</div>
+          <Typewriter />
+          <div className="button-container">
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <img className='selected-tab' src="/media-icons/resume.svg" alt="Resume" />
+            </a>
+            <a href="https://www.linkedin.com/in/jaksec" target="_blank" rel="noopener noreferrer">
+              <img className='selected-tab' src="/media-icons/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://www.github.com/jaksec" target="_blank" rel="noopener noreferrer">
+              <img className='selected-tab' src="/media-icons/github.svg" alt="GitHub" />
+            </a>
+          </div>
+        </header>
       </>
     );
 }
@@ -36,9 +38,9 @@ function AboutPage() {
     <>
       <div className="about-me-wrapper">
         <div className="about-me-content">
-                I'm currently a senior at the University of Central Florida majoring in computer science.
-                I'm an aspiring full-stack engineer and primarily work with React, TypeScript,
-                and Python. In my free time, you can catch me exploring nature, collecting fragrances, or playing games 
+                I'm currently a senior at UCF majoring in computer science.
+                I'm an aspiring software engineer and primarily work with Python, React.js, and TypeScript.
+                In my free time, you can catch me exploring nature, collecting fragrances, or playing games 
                 with my friends.
         </div>
         <div className="about-me-content">
@@ -48,7 +50,7 @@ function AboutPage() {
                 been learning and growing ever since.
         </div>
           <div className="tech-stack-wrapper">
-            <div className="tech-stack-title">My Tech Stack:</div>
+            <div className="tech-stack-title">Tech Stack:</div>
               <div className="tech-stack-container">
                 <a>
                   <img className="selected-tab" src="/tech-icons/python.svg" alt="Python" />
@@ -60,19 +62,40 @@ function AboutPage() {
                   <img className="selected-tab" src="/tech-icons/c.svg" alt="C" />
                 </a>
                 <a>
-                  <img className="selected-tab" src="/tech-icons/javascript.svg" alt="JavaScript" />
-                </a>
-                <a>
                   <img className="selected-tab" src="/tech-icons/typescript.svg" alt="TypeScript" />
                 </a>
                 <a>
-                  <img className="selected-tab" src="/tech-icons/react.svg" alt="React" />
+                  <img className="selected-tab" src="/tech-icons/javascript.svg" alt="JavaScript" />
                 </a>
                 <a>
-                  <img className="selected-tab" src="/tech-icons/node.svg" alt="Node" />
+                  <img className="selected-tab" src="/tech-icons/node.svg" alt="Node.js" />
                 </a>
                 <a>
-                  <img className="selected-tab" src="/tech-icons/express.svg" alt="Express" />
+                  <img className="selected-tab" src="/tech-icons/react.svg" alt="React.js" />
+                </a>
+                <a>
+                  <img className="selected-tab" src="/tech-icons/next.svg" alt="Next.js" />
+                </a>
+                <a>
+                  <img className="selected-tab" src="/tech-icons/express.svg" alt="Express.js" />
+                </a>
+                <a>
+                  <img className="selected-tab" src="/tech-icons/fastapi.svg" alt="FastAPI" />
+                </a>
+                <a>
+                  <img className="selected-tab" src="/tech-icons/tailwind.svg" alt="Tailwind CSS" />
+                </a>
+                <a>
+                  <img className="selected-tab" src="/tech-icons/gcp.svg" alt="Google Cloud Platform (GCP)" />
+                </a>
+                <a>
+                  <img className="selected-tab" src="/tech-icons/airflow.svg" alt="Apache Airflow" />
+                </a>
+                <a>
+                  <img className="selected-tab" src="/tech-icons/docker.svg" alt="Docker" />
+                </a>
+                <a>
+                  <img className="selected-tab" src="/tech-icons/mysql.svg" alt="MySQL" />
                 </a>
                 <a>
                   <img className="selected-tab" src="/tech-icons/mongodb.svg" alt="MongoDB" />
@@ -95,34 +118,17 @@ function ProjectsPage() {
       <div className="project-list-wrapper">
             <div className="project-card">
                 <div className="project-icon">
-                  <img className="selected-tab" src="/project-icons/noteboard.svg" alt="Noteboard" />
+                  <img className="selected-tab" src="/project-icons/nutrition.svg" alt="KnightTracks" />
                 </div>
                 <div className="project-title">
-                  Noteboard
-                  <a href="https://www.github.com/jaksec/noteboard" target="_blank" rel="noopener noreferrer">
+                  KnightTracks
+                  <a href="https://www.github.com/jaksec/knighttracks" target="_blank" rel="noopener noreferrer">
                   <img className="selected-tab" src="/symbol-icons/link.svg" />
                   </a>
                 </div>
-                <div className="project-tags">Python, Tkinter, NumPy</div>
+                <div className="project-tags">React, TypeScript, Express, MongoDB</div>
                 <div className="project-description">
-                A Python application that captures audio input & translates it into keyboard key presses. Utilizes speech recognition & automation libraries 
-                to convert musical notes into real-time key presses.
-              </div>
-            </div>
-            <div className="project-card">
-                <div className="project-icon">
-                  <img className="selected-tab" src="/project-icons/eye.svg" alt="BlurrSmith.ai" />
-                </div>
-                <div className="project-title">
-                  BlurrSmith.ai
-                  <a href="https://6507104a5d971a4275e265e1--strong-kringle-b099de.netlify.app/" target="_blank" rel="noopener noreferrer">
-                  <img className="selected-tab" src="/symbol-icons/link.svg" />
-                  </a>
-                </div>
-                <div className="project-tags">React, TypeScript, Tailwind CSS, Python, OpenCV</div>
-                <div className="project-description">
-                A React-based web app that automatically detects and blurs faces and license plates in user-uploaded images to protect privacy. 
-                Integrated Flask and OpenCV on the backend for image processing, with Tailwind CSS used to create a clean and intuitive user interface.
+                A nutrition tracker that enables real-time meal logging and macronutrient analysis through a React + TypeScript interface. Powered by Express APIs and MongoDB, it delivers secure, scalable storage of user nutrition data and supports customizable goals.
               </div>
             </div>
             <div className="project-card">
@@ -141,6 +147,22 @@ function ProjectsPage() {
                 it delivers contextually accurate responses. The backend, developed with Flask and Python, connects to an Azure-hosted SQL database to retrieve relevant legal information efficiently.
               </div>
             </div>
+            <div className="project-card">
+                <div className="project-icon">
+                  <img className="selected-tab" src="/project-icons/eye.svg" alt="BlurrSmith.ai" />
+                </div>
+                <div className="project-title">
+                  BlurrSmith.ai
+                  <a href="https://github.com/Lewin-B/Shellhacks-2023" target="_blank" rel="noopener noreferrer">
+                  <img className="selected-tab" src="/symbol-icons/link.svg" />
+                  </a>
+                </div>
+                <div className="project-tags">React, TypeScript, Tailwind CSS, Python, OpenCV</div>
+                <div className="project-description">
+                A React-based web app that automatically detects and blurs faces and license plates in user-uploaded images to protect privacy. 
+                Integrated Flask and OpenCV on the backend for image processing, with Tailwind CSS used to create a clean and intuitive user interface.
+              </div>
+            </div>
         <div style={{ marginTop: '100px' }} />
 
       </div>
@@ -152,11 +174,13 @@ function Tabs({ onTabClick }: { onTabClick: (path: string) => void }) {
   const currentPath = location.pathname;
 
   return (
-    <div className="tabs">
-      <div className={`selected-tab tab cursor-pointer ${currentPath === '/' ? 'underline' : ''}`} onClick={() => onTabClick('/')}>Home</div>
-      <div className={`selected-tab tab cursor-pointer ${currentPath === '/about' ? 'underline' : ''}`} onClick={() => onTabClick('/about')}>About</div>
-      <div className={`selected-tab tab cursor-pointer ${currentPath === '/projects' ? 'underline' : ''}`} onClick={() => onTabClick('/projects')}>Projects</div>
-    </div>
+    <nav>
+      <div className="tabs">
+        <div className={`selected-tab tab cursor-pointer ${currentPath === '/' ? 'underline' : ''}`} onClick={() => onTabClick('/')}>Home</div>
+        <div className={`selected-tab tab cursor-pointer ${currentPath === '/about' ? 'underline' : ''}`} onClick={() => onTabClick('/about')}>About</div>
+        <div className={`selected-tab tab cursor-pointer ${currentPath === '/projects' ? 'underline' : ''}`} onClick={() => onTabClick('/projects')}>Projects</div>
+      </div>
+    </nav>
   );
 }
 
