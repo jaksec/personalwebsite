@@ -187,7 +187,6 @@ function Tabs({ onTabClick }: { onTabClick: (path: string) => void }) {
 function PageWrapper() {
   const [transitioning, setTransitioning] = useState(false);
   const [pendingPath, setPendingPath] = useState<string | null>(null);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -209,44 +208,8 @@ function PageWrapper() {
     }
   }, [transitioning, pendingPath, navigate]);
 
-  // Wait for all <img> elements to finish loading before fade-in
-  useEffect(() => {
-    const images = document.querySelectorAll("img");
-    let loaded = 0;
-
-    const onImageLoad = () => {
-      loaded++;
-      if (loaded === images.length) {
-        setImagesLoaded(true);
-      }
-    };
-
-    images.forEach((img) => {
-      if (img.complete) {
-        loaded++;
-      } else {
-        img.addEventListener("load", onImageLoad);
-        img.addEventListener("error", onImageLoad); // In case of 404s or broken URLs
-      }
-    });
-
-    if (loaded === images.length) {
-      setImagesLoaded(true);
-    }
-
-    return () => {
-      images.forEach((img) => {
-        img.removeEventListener("load", onImageLoad);
-        img.removeEventListener("error", onImageLoad);
-      });
-    };
-  }, [location]); // run again on route change
-
-  const pageClass = transitioning
-    ? "fade-out"
-    : imagesLoaded
-    ? "fade-in"
-    : ""; // no fade until images are ready
+  // Always apply fade-in when not transitioning. Do not wait on image loads.
+  const pageClass = transitioning ? "fade-out" : "fade-in";
 
   return (
     <>
@@ -263,6 +226,46 @@ function PageWrapper() {
 }
 
 function App() {
+  // Warm the browser cache with commonly used images on first load
+  useEffect(() => {
+    const assetPaths = [
+      // Media icons
+      "/media-icons/github.svg",
+      "/media-icons/linkedin.svg",
+      "/media-icons/resume.svg",
+      // Project icons
+      "/project-icons/eye.svg",
+      "/project-icons/law.svg",
+      "/project-icons/nutrition.svg",
+      // Symbol icons
+      "/symbol-icons/link.svg",
+      // Tech icons used on About
+      "/tech-icons/python.svg",
+      "/tech-icons/java.svg",
+      "/tech-icons/c.svg",
+      "/tech-icons/typescript.svg",
+      "/tech-icons/javascript.svg",
+      "/tech-icons/node.svg",
+      "/tech-icons/react.svg",
+      "/tech-icons/next.svg",
+      "/tech-icons/express.svg",
+      "/tech-icons/fastapi.svg",
+      "/tech-icons/tailwind.svg",
+      "/tech-icons/gcp.svg",
+      "/tech-icons/airflow.svg",
+      "/tech-icons/docker.svg",
+      "/tech-icons/mysql.svg",
+      "/tech-icons/mongodb.svg",
+    ];
+
+    assetPaths.forEach((src) => {
+      const img = new Image();
+      img.decoding = "async";
+      img.loading = "eager" as any;
+      img.src = src;
+    });
+  }, []);
+
   return (
     <Router>
       <div className="container">
