@@ -211,7 +211,7 @@
   .about-me-content {
     font-size: 1.1em; /* Down from 1.3em */
     max-width: none; /* Remove constraint */
-    width: 100%; /* Full width */
+    width: 80%; /* Full width */
     padding: 0 0.5rem; /* Minimal padding */
   }
 
