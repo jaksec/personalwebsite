@@ -210,8 +210,14 @@
 
   .about-me-content {
     font-size: 1.1em; /* Down from 1.3em */
-    max-width: 100%; /* Full width on tablets */
-    padding: 0 1rem; /* Add some breathing room */
+    max-width: none; /* Remove constraint */
+    width: 100%; /* Full width */
+    padding: 0 0.5rem; /* Minimal padding */
+  }
+
+  .about-me-wrapper {
+    max-width: 100%; /* Full width wrapper */
+    width: 100%; /* Ensure full width */
   }
 
   .tech-stack-title {
@@ -238,7 +244,7 @@
 /* Mobile phones (480px and below) */
 @media (max-width: 480px) {
   #root {
-    padding: 1rem; /* Minimal side padding on mobile */
+    padding: 0.5rem; /* Minimal root padding */
   }
 
   .title {
@@ -247,10 +253,18 @@
   }
 
   .about-me-content {
-    font-size: 0.9em;
-    max-width: 100%; /* Full width paragraphs on mobile */
-    margin-top: 2rem; /* Reduce spacing on mobile */
-    padding: 0; /* No side padding - maximize width */
+    font-size: 1.1em; /* Larger font for readability */
+    max-width: none; /* Remove max-width constraint */
+    width: 80%; /* Full width */
+    margin-top: 3rem; /* More space between paragraphs */
+    padding: 0 0.25rem; /* Minimal padding - maximize width */
+    box-sizing: border-box;
+  }
+
+  .about-me-wrapper {
+    max-width: 100%; /* Full width wrapper */
+    width: 100%; /* Ensure wrapper is full width */
+    padding: 0; /* No wrapper padding */
   }
 
   .tech-stack-title {
@@ -260,13 +274,13 @@
   .tech-stack-container {
     max-width: 100%; /* Full width for tech icons */
     width: 100%; /* Ensure full width */
-    gap: 0.5rem; /* Slightly tighter spacing to fit 4 icons */
+    gap: 0.75rem; /* Slightly tighter spacing to fit 4 icons */
     padding: 0 0.5rem; /* Some padding for edges */
   }
 
   .tech-stack-wrapper {
     max-width: 100%; /* Full width wrapper */
-    width: 100%; /* Ensure full width */
+    width: 70%; /* Ensure full width */
   }
 
   .tech-stack-container img {
@@ -299,7 +313,7 @@
 /* Extra small devices (360px and below) */
 @media (max-width: 360px) {
   #root {
-    padding: 0.75rem; /* Even less side padding on very small screens */
+    padding: 0.5rem; /* Minimal root padding */
   }
 
   .title {
@@ -308,9 +322,18 @@
   }
 
   .about-me-content {
-    font-size: 0.9em;
-    max-width: 100%; /* Full width on tiny screens */
-    padding: 0; /* No padding - maximize width */
+    font-size: 1em; /* Readable font size */
+    max-width: none; /* Remove max-width constraint */
+    width: 100%; /* Full width */
+    padding: 0 0.15rem; /* Minimal padding - maximize width */
+    line-height: 1.8; /* Maintain line spacing */
+    margin-top: 2.5rem; /* Good spacing between paragraphs */
+    box-sizing: border-box;
+  }
+
+  .about-me-wrapper {
+    max-width: 100%; /* Full width wrapper */
+    width: 100%; /* Ensure wrapper is full width */
   }
 
   .tech-stack-title {
