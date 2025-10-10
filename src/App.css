@@ -108,6 +108,7 @@
   font-weight: 300;
   margin-top: 2.5rem;
   text-align: center;
+  width: 100%; /* Ensure it takes full available width */
 }
 
 .tech-stack-wrapper {
@@ -192,4 +193,140 @@
   font-size: 1.1em;
   margin-bottom: 1em;
   top: 5rem;
+}
+
+/* Responsive Text Sizing for Mobile */
+
+/* Tablet and smaller (768px and below) */
+@media (max-width: 768px) {
+  #root {
+    padding: 1.5rem; /* Reduce side padding on tablets */
+  }
+
+  .title {
+    font-size: 3.5em; /* Down from 3.5em */
+    margin-top: 1em; /* More space from nav on tablets */
+  }
+
+  .about-me-content {
+    font-size: 1.1em; /* Down from 1.3em */
+    max-width: 100%; /* Full width on tablets */
+    padding: 0 1rem; /* Add some breathing room */
+  }
+
+  .tech-stack-title {
+    font-size: 1.4em; /* Down from 1.7em */
+  }
+
+  .project-title {
+    font-size: 1.3rem; /* Down from 1.5rem */
+  }
+
+  .project-description {
+    font-size: 1em; /* Down from 1.1em */
+  }
+
+  .project-card {
+    max-width: 85%; /* Slightly wider on tablets */
+  }
+
+  .tab {
+    font-size: medium; /* Down from large */
+  }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+  #root {
+    padding: 1rem; /* Minimal side padding on mobile */
+  }
+
+  .title {
+    font-size: 2em; /* Further reduced for small phones */
+    margin-top: 1.5em; /* Even more space from nav on mobile */
+  }
+
+  .about-me-content {
+    font-size: 0.9em;
+    max-width: 100%; /* Full width paragraphs on mobile */
+    margin-top: 2rem; /* Reduce spacing on mobile */
+    padding: 0; /* No side padding - maximize width */
+  }
+
+  .tech-stack-title {
+    font-size: 1.2em;
+  }
+
+  .tech-stack-container {
+    max-width: 100%; /* Full width for tech icons */
+    width: 100%; /* Ensure full width */
+    gap: 0.5rem; /* Slightly tighter spacing to fit 4 icons */
+    padding: 0 0.5rem; /* Some padding for edges */
+  }
+
+  .tech-stack-wrapper {
+    max-width: 100%; /* Full width wrapper */
+    width: 100%; /* Ensure full width */
+  }
+
+  .tech-stack-container img {
+    width: 3rem; /* Slightly smaller icons to fit 4 per row */
+    height: 3rem;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .project-description {
+    font-size: 0.95em;
+  }
+
+  .project-card {
+    max-width: 80%; /* Nearly full width on phones */
+    padding: 0.8rem; /* Reduced padding */
+  }
+
+  .tab {
+    font-size: small;
+  }
+
+  .tabs {
+    gap: 0.5rem; /* Tighter spacing for tabs */
+  }
+}
+
+/* Extra small devices (360px and below) */
+@media (max-width: 360px) {
+  #root {
+    padding: 0.75rem; /* Even less side padding on very small screens */
+  }
+
+  .title {
+    font-size: 1.5em;
+    margin-top: 2em; /* Maximum space from nav on very small screens */
+  }
+
+  .about-me-content {
+    font-size: 0.9em;
+    max-width: 100%; /* Full width on tiny screens */
+    padding: 0; /* No padding - maximize width */
+  }
+
+  .tech-stack-title {
+    font-size: 1.1em;
+  }
+
+  .tech-stack-container img {
+    width: 2.5rem; /* Even smaller icons for very small screens */
+    height: 2.5rem;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.9em;
+  }
 }
