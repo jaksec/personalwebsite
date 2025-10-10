@@ -224,6 +224,18 @@
     font-size: 1.4em; /* Down from 1.7em */
   }
 
+  .tech-stack-container {
+    max-width: 100%; /* Full width for tech icons */
+    width: 100%; /* Ensure full width */
+    gap: 0.75rem; /* Slightly tighter spacing to fit 4 icons */
+    padding: 0 0.5rem; /* Some padding for edges */
+  }
+
+  .tech-stack-wrapper {
+    max-width: 100%; /* Full width wrapper */
+    width: 80%; /* Ensure full width */
+  }
+
   .project-title {
     font-size: 1.3rem; /* Down from 1.5rem */
   }
@@ -281,11 +293,6 @@
   .tech-stack-wrapper {
     max-width: 100%; /* Full width wrapper */
     width: 70%; /* Ensure full width */
-  }
-
-  .tech-stack-container img {
-    width: 3rem; /* Slightly smaller icons to fit 4 per row */
-    height: 3rem;
   }
 
   .project-title {
