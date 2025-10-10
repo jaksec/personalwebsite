@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import './App.css';
-import Typewriter from './Typewriter'; // Adjusted path to match relative location
+import Typewriter from './Typewriter';
 
 function HomePage() {
     useEffect(() => {
-      document.title = "Home";
+      document.title = "Chris Jaksec";
     }, []);
   
     return (
       <>
         <header>
-          <div className="title">Hi, I'm Chris Jaksec!</div>
+          <div className="title">Hi, I'm Chris Jaksec! <span className="wave">👋</span></div>
           <Typewriter />
           <div className="button-container">
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
@@ -31,7 +31,7 @@ function HomePage() {
 
 function AboutPage() {
   useEffect(() => {
-    document.title = "About";
+    document.title = "About | jaksec.dev";
   }, []);
 
   return (
@@ -39,15 +39,14 @@ function AboutPage() {
       <div className="about-me-wrapper">
         <div className="about-me-content">
                 I'm currently a senior at UCF majoring in computer science.
-                I'm an aspiring software engineer and primarily work with Python, React.js, and TypeScript.
-                In my free time, you can catch me exploring nature, collecting fragrances, or playing games 
-                with my friends.
+                I'm an aspiring full-stack engineer and love all things Python and React.
+                In my free time, you can catch me working on my latest project, shopping and collecting fragrances, or binge-watching the latest movie or TV show I'm hooked to at the moment.
         </div>
         <div className="about-me-content">
                 I first started programming at 17, when I was bored in my room and tried to craft a to-do list out of pure HTML.
-                I became more curious and interested so I started learning Python and immediately fell in love with the creativity
-                and problem-solving programming had to offer. I continued my passion for programming at UCF and have
-                been learning and growing ever since.
+                I became more curious and interested in the idea of creating programs that could benefit the lives of others, so I started learning Python and immediately fell in love with the creativity
+                and problem-solving software development had to offer. I continued my passion for software at UCF and have
+                been learning and growing ever since. You can always catch me working on a new project and trying to learn a new skill at any chance I get.
         </div>
           <div className="tech-stack-wrapper">
             <div className="tech-stack-title">Tech Stack:</div>
@@ -57,9 +56,6 @@ function AboutPage() {
                 </a>
                 <a>
                   <img className="selected-tab" src="/tech-icons/java.svg" alt="Java" />
-                </a>
-                <a>
-                  <img className="selected-tab" src="/tech-icons/c.svg" alt="C" />
                 </a>
                 <a>
                   <img className="selected-tab" src="/tech-icons/typescript.svg" alt="TypeScript" />
@@ -86,7 +82,7 @@ function AboutPage() {
                   <img className="selected-tab" src="/tech-icons/tailwind.svg" alt="Tailwind CSS" />
                 </a>
                 <a>
-                  <img className="selected-tab" src="/tech-icons/gcp.svg" alt="Google Cloud Platform (GCP)" />
+                  <img className="selected-tab" src="/tech-icons/bigquery.svg" alt="Google BigQuery" />
                 </a>
                 <a>
                   <img className="selected-tab" src="/tech-icons/airflow.svg" alt="Apache Airflow" />
@@ -95,7 +91,7 @@ function AboutPage() {
                   <img className="selected-tab" src="/tech-icons/docker.svg" alt="Docker" />
                 </a>
                 <a>
-                  <img className="selected-tab" src="/tech-icons/mysql.svg" alt="MySQL" />
+                  <img className="selected-tab" src="/tech-icons/postgresql.svg" alt="PostgreSQL" />
                 </a>
                 <a>
                   <img className="selected-tab" src="/tech-icons/mongodb.svg" alt="MongoDB" />
@@ -111,7 +107,7 @@ function AboutPage() {
 
 function ProjectsPage() {
   useEffect(() => {
-    document.title = "Projects";
+    document.title = "Projects | jaksec.dev";
   }, []);
 
   return (
@@ -242,7 +238,6 @@ function App() {
       // Tech icons used on About
       "/tech-icons/python.svg",
       "/tech-icons/java.svg",
-      "/tech-icons/c.svg",
       "/tech-icons/typescript.svg",
       "/tech-icons/javascript.svg",
       "/tech-icons/node.svg",
@@ -251,10 +246,10 @@ function App() {
       "/tech-icons/express.svg",
       "/tech-icons/fastapi.svg",
       "/tech-icons/tailwind.svg",
-      "/tech-icons/gcp.svg",
+      "/tech-icons/bigquery.svg",
       "/tech-icons/airflow.svg",
       "/tech-icons/docker.svg",
-      "/tech-icons/mysql.svg",
+      "/tech-icons/postgresql.svg",
       "/tech-icons/mongodb.svg",
     ];
 

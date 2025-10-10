@@ -6,8 +6,9 @@ const Typewriter = () => {
     "Software Engineer.",
     "Developer.",
     "Student.",
+    "Foodie.",
     "I build applications.",
-    "I create solutions.",
+    "I code solutions."
   ];
 
   const [text, setText] = useState("");
