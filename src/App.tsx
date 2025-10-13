@@ -46,7 +46,7 @@ function AboutPage() {
                 I first started programming at 17, when I was bored in my room and tried to craft a to-do list out of pure HTML.
                 I became more curious and interested in the idea of creating programs that could benefit the lives of others, so I started learning Python and immediately fell in love with the creativity
                 and problem-solving software development had to offer. I continued my passion for software at UCF and have
-                been learning and growing ever since. You can always catch me working on a new project and trying to learn a new skill at any chance I get.
+                been learning and growing as a developer ever since.
         </div>
           <div className="tech-stack-wrapper">
             <div className="tech-stack-title">Tech Stack:</div>
