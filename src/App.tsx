@@ -124,7 +124,7 @@ function ProjectsPage() {
                 </div>
                 <div className="project-title">
                   Vul-RAG
-                  <a href="https://github.com/Vul-Rag/Vul-RAG-Application" target="_blank" rel="noopener noreferrer">
+                  <a href="https://vulrag.cloud/" target="_blank" rel="noopener noreferrer">
                   <img className="selected-tab" src="/symbol-icons/link.svg" />
                   </a>
                 </div>
