@@ -76,6 +76,9 @@ function AboutPage() {
                   <img className="selected-tab" src="/tech-icons/express.svg" alt="Express.js" />
                 </a>
                 <a>
+                  <img className="selected-tab" src="/tech-icons/flask.svg" alt="Flask" />
+                </a>
+                <a>
                   <img className="selected-tab" src="/tech-icons/fastapi.svg" alt="FastAPI" />
                 </a>
                 <a>
@@ -96,6 +99,9 @@ function AboutPage() {
                 <a>
                   <img className="selected-tab" src="/tech-icons/mongodb.svg" alt="MongoDB" />
                 </a>
+                <a>
+                  <img className="selected-tab" src="/tech-icons/elasticsearch.svg" alt="Elasticsearch" />
+                </a>
               </div>
         </div>
 
@@ -112,6 +118,21 @@ function ProjectsPage() {
 
   return (
       <div className="project-list-wrapper">
+              <div className="project-card">
+                <div className="project-icon">
+                  <img className="selected-tab" src="/project-icons/vul.svg" alt="Vul-RAG" />
+                </div>
+                <div className="project-title">
+                  Vul-RAG
+                  <a href="https://github.com/Vul-Rag/Vul-RAG-Application" target="_blank" rel="noopener noreferrer">
+                  <img className="selected-tab" src="/symbol-icons/link.svg" />
+                  </a>
+                </div>
+                <div className="project-tags">Python, Flask, Elasticsearch</div>
+                <div className="project-description">
+                A vulnerability analysis platform that ingests user-provided code, retrieves relevant security knowledge through a RAG pipeline, and produces detailed vulnerability reports with contextual explanations and references.
+              </div>
+            </div>
             <div className="project-card">
                 <div className="project-icon">
                   <img className="selected-tab" src="/project-icons/nutrition.svg" alt="KnightTracks" />
@@ -122,9 +143,9 @@ function ProjectsPage() {
                   <img className="selected-tab" src="/symbol-icons/link.svg" />
                   </a>
                 </div>
-                <div className="project-tags">React, TypeScript, Express, MongoDB</div>
+                <div className="project-tags">React, Express, MongoDB</div>
                 <div className="project-description">
-                A nutrition tracker that enables real-time meal logging and macronutrient analysis through a React + TypeScript interface. Powered by Express APIs and MongoDB, it delivers secure, scalable storage of user nutrition data and supports customizable goals.
+                A nutrition tracker that supports real-time meal logging, automatic macronutrient analysis, and personalized goal tracking to help users monitor their daily intake with clarity and convenience.
               </div>
             </div>
             <div className="project-card">
@@ -137,26 +158,9 @@ function ProjectsPage() {
                   <img className="selected-tab" src="/symbol-icons/link.svg" />
                   </a>
                 </div>
-                <div className="project-tags">React, TypeScript, Python, Azure</div>
+                <div className="project-tags">React, Python, Azure</div>
                 <div className="project-description">
-                An AI chatbot that provides real-time legal guidance through a user-friendly React interface. Powered by a GPT-based model via the OpenAI API, 
-                it delivers contextually accurate responses. The backend, developed with Flask and Python, connects to an Azure-hosted SQL database to retrieve relevant legal information efficiently.
-              </div>
-            </div>
-            <div className="project-card">
-                <div className="project-icon">
-                  <img className="selected-tab" src="/project-icons/eye.svg" alt="BlurrSmith.ai" />
-                </div>
-                <div className="project-title">
-                  BlurrSmith.ai
-                  <a href="https://github.com/Lewin-B/Shellhacks-2023" target="_blank" rel="noopener noreferrer">
-                  <img className="selected-tab" src="/symbol-icons/link.svg" />
-                  </a>
-                </div>
-                <div className="project-tags">React, TypeScript, Tailwind CSS, Python, OpenCV</div>
-                <div className="project-description">
-                A React-based web app that automatically detects and blurs faces and license plates in user-uploaded images to protect privacy. 
-                Integrated Flask and OpenCV on the backend for image processing, with Tailwind CSS used to create a clean and intuitive user interface.
+                An AI legal assistant that provides real-time guidance, delivering clear and contextually accurate answers to user questions through an intuitive chat interface.
               </div>
             </div>
         <div style={{ marginTop: '100px' }} />
@@ -230,7 +234,7 @@ function App() {
       "/media-icons/linkedin.svg",
       "/media-icons/resume.svg",
       // Project icons
-      "/project-icons/eye.svg",
+      "/project-icons/vul.svg",
       "/project-icons/law.svg",
       "/project-icons/nutrition.svg",
       // Symbol icons
@@ -244,6 +248,7 @@ function App() {
       "/tech-icons/react.svg",
       "/tech-icons/next.svg",
       "/tech-icons/express.svg",
+      "/tech-icons/flask.svg",
       "/tech-icons/fastapi.svg",
       "/tech-icons/tailwind.svg",
       "/tech-icons/bigquery.svg",
@@ -251,6 +256,7 @@ function App() {
       "/tech-icons/docker.svg",
       "/tech-icons/postgresql.svg",
       "/tech-icons/mongodb.svg",
+      "/tech-icons/elasticsearch.svg",
     ];
 
     assetPaths.forEach((src) => {
